@@ -16,7 +16,7 @@ struct ContentView: View {
             
             Button("Tap me") {
                           count += 1
-                      }
+        }
         }
         .padding()
     }
