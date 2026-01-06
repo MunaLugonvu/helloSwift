@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var count = 0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world Muna!")
-            Text("Day 1 of learning Swift")
-                .font(.caption)
-                .foregroundStyle(.secondary)
+        VStack (spacing:20){
+            Text("You pressed the button \(count) times").font(.title)
+            
+            Button("Tap me") {
+                          count += 1
+                      }
         }
         .padding()
     }
