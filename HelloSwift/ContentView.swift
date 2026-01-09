@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var count = 0
+    
     
     var body: some View {
-        VStack (spacing:20){
-            Text("You pressed the button \(count) times").font(.title)
-            
-            Button("Tap me") {
-                          count += 1
-        }
+        NavigationStack{
+            VStack(spacing:4){
+                Text("Welcome").font(.largeTitle)
+                NavigationLink("Go to Details"){
+                DetailView(message: "Hi")
+                }
+            }
         }
         .padding()
     }

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct DetailView: View {
+    let message: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text(message).font(.title)
+        }
+        .navigationTitle("Details")
+        .padding()
     }
 }
 
 #Preview {
-    DetailView()
+    DetailView(message: "Hey")
 }
